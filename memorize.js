@@ -1,3 +1,3 @@
-chrome.downloads.onCreated.addListener(() => {
-  console.log("hello in background");
+chrome.downloads.onCreated.addListener((downloadItem) => {
+  console.log(downloadItem.url);
 });
