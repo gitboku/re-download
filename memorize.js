@@ -1,3 +1,4 @@
 chrome.downloads.onCreated.addListener((downloadItem) => {
-  console.log(downloadItem.url);
+  let key = dateFormat.format(new Date(), 'yyyyMMddhhmmss');
+  chrome.storage.local.set({key: downloadItem.url});
 });
