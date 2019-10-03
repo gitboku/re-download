@@ -4,7 +4,7 @@ chrome.downloads.onCreated.addListener((downloadItem) => {
   // 保存数が限界になったら古い順に削除していく
   chrome.storage.local.get(null, removeFirstStorageItemIfNecessary);
 
-  let storageKey = dateFormat.format(new Date(), 'yyyyMMddhhmmss');
+  let storageKey = Date.now()
   chrome.storage.local.set({[storageKey]: downloadItem.url});
 });
 
