@@ -15,8 +15,7 @@
   ],
   "background": {
     "scripts": [
-      "memorize.js",
-      "storage"
+      "memorize.js"
     ]
   },
   "content_scripts": [
