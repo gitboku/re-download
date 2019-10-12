@@ -1,3 +1,7 @@
+const makeDeleteButtonString = (index) => {
+  return `<td id='del-${index}'><button type='button'>×</button></td>`
+}
+
 const makeLinkString = (index, value) => {
   return `<td id='td-${index}'><a href='${value}' download>${value}</a></td>`
 }
@@ -9,6 +13,7 @@ const makeTable = (datas) => {
     $.each(datas, (index, value) => {
       $('tbody').append($(`<tr id='row-${index}'>`)
         .append($(makeLinkString(index, value)))
+        .append($(makeDeleteButtonString(index)))
       )
     })
   })
