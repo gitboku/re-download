@@ -8,10 +8,10 @@ const makeLinkString = (index, value) => {
 
 const makeTable = (datas) => {
   $(document).ready(function () {
-    $("#content").append($("<table>")).append($("<tbody id='table-content'>"))
+    $("#redownload-content").append($("<table>")).append($("<tbody id='redownload-table-content'>"))
 
     $.each(datas, (index, value) => {
-      $('tbody').append($(`<tr id='row-${index}'>`)
+      $('tbody#redownload-table-content').append($(`<tr id='row-${index}'>`)
         .append($(makeLinkString(index, value)))
         .append($(makeDeleteButtonString(index)))
       )
@@ -20,7 +20,7 @@ const makeTable = (datas) => {
 }
 
 const makeDefault = () => {
-  $('#content').append('<div>保存されたアイテムはありません。</div>')
+  $('#redownload-content').append('<div>保存されたアイテムはありません。</div>')
 }
 
 const makeContents = () => {
