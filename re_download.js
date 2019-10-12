@@ -1,10 +1,14 @@
+const makeLinkString = (index, value) => {
+  return `<td id='td-${index}'><a href='${value}' download>${value}</a></td>`
+}
+
 const makeTable = (datas) => {
   $(document).ready(function () {
     $("#content").append($("<table>")).append($("<tbody id='table-content'>"))
 
     $.each(datas, (index, value) => {
       $('tbody').append($(`<tr id='row-${index}'>`)
-        .append($(`<td id='td-${index}'>`).text(value))
+        .append($(makeLinkString(index, value)))
       )
     })
   })
