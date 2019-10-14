@@ -1,5 +1,16 @@
+const deleteFromStorage = (targetIndex) => {
+  chrome.storage.local.remove(targetIndex, () => {
+    window.location.reload()
+  })
+}
+
+$(document).on('click', '.redownload-delete-button', (event) => {
+  let targetIndex = event.currentTarget.dataset.index
+  deleteFromStorage(targetIndex)
+})
+
 const makeDeleteButtonString = (index) => {
-  return `<td id='del-${index}'><button type='button'>×</button></td>`
+  return `<td><button class='redownload-delete-button' data-index='${index}' type='button'>×</button></td>`
 }
 
 const makeLinkString = (index, value) => {
