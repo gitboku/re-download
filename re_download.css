@@ -2,3 +2,7 @@ td.redownload-td {
   border: solid;
   padding: 5px;
 }
+
+div#no-content {
+  width: 100px;
+}

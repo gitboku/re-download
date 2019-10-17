@@ -31,7 +31,7 @@ const makeTable = (datas) => {
 }
 
 const makeDefault = () => {
-  $('#redownload-content').append('<div>保存されたアイテムはありません。</div>')
+  $('#redownload-content').append('<div id="no-content">保存されたアイテムはありません。</div>')
 }
 
 const makeContents = () => {
