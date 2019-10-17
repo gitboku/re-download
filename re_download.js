@@ -14,7 +14,7 @@ const makeDeleteButtonString = (index) => {
 }
 
 const makeLinkString = (index, value) => {
-  return `<td id='td-${index}'><a href='${value}' download>${value}</a></td>`
+  return `<td class='redownload-td' id='td-${index}'><a href='${value}' download>${value}</a></td>`
 }
 
 const makeTable = (datas) => {
