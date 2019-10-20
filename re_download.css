@@ -1,8 +1,16 @@
 td.redownload-td {
-  border: solid;
   padding: 5px;
 }
 
 div#no-content {
   width: 100px;
+}
+
+body#redownload-body {
+  margin: 0px;
+  margin-right: 3px;
+}
+
+tr.redownload-tr {
+  border-bottom: 1px solid;
 }

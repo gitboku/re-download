@@ -19,10 +19,10 @@ const makeLinkString = (index, value) => {
 
 const makeTable = (datas) => {
   $(document).ready(function () {
-    $("#redownload-content").append($("<table>")).append($("<tbody id='redownload-tbody'>"))
+    $("#redownload-content").append($("<tbody id='redownload-tbody'>"))
 
     $.each(datas, (index, value) => {
-      $('tbody#redownload-tbody').append($(`<tr id='row-${index}'>`)
+      $('tbody#redownload-tbody').append($(`<tr class='redownload-tr'>`)
         .append($(makeLinkString(index, value)))
         .append($(makeDeleteButtonString(index)))
       )
