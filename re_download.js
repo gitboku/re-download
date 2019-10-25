@@ -14,7 +14,7 @@ const makeDeleteButtonString = (index) => {
 }
 
 chrome.storage.onChanged.addListener(() => {
-  window.close()
+  window.location.reload()
 })
 
 const makeLinkString = (index, value) => {
