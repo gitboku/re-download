@@ -9,7 +9,7 @@ chrome.downloads.onCreated.addListener((downloadItem) => {
 });
 
 const removeFirstStorageItemIfNecessary = (storageItems) => {
-  if (storageItems.length >= MAX_NUM_LIST_ITEM) {
+  if (Object.keys(storageItems).length >= MAX_NUM_LIST_ITEM) {
     let firstKey = Object.keys(storageItems)[0];
     chrome.storage.local.remove(firstKey);
   }
