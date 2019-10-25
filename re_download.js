@@ -13,6 +13,10 @@ const makeDeleteButtonString = (index) => {
   return `<td><button class='redownload-delete-button' data-index='${index}' type='button'>×</button></td>`
 }
 
+chrome.storage.onChanged.addListener(() => {
+  window.close()
+})
+
 const makeLinkString = (index, value) => {
   return `<td class='redownload-td' id='td-${index}'><a href='${value}' download>${value}</a></td>`
 }
