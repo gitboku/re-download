@@ -22,7 +22,7 @@ const makeTable = (datas) => {
     $("#redownload-content").append($("<tbody id='redownload-tbody'>"))
 
     $.each(datas, (index, value) => {
-      $('tbody#redownload-tbody').append($(`<tr class='redownload-tr'>`)
+      $('tbody#redownload-tbody').prepend($(`<tr class='redownload-tr'>`)
         .append($(makeLinkString(index, value)))
         .append($(makeDeleteButtonString(index)))
       )
