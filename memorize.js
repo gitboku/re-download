@@ -36,8 +36,8 @@ chrome.downloads.onChanged.addListener((downloadDelta) => {
 });
 
 const removeFirstStorageItemIfNecessary = (storageItems) => {
-  if (Object.keys(storageItems).length >= MAX_NUM_LIST_ITEM) {
-    let firstKey = Object.keys(storageItems)[0];
-    chrome.storage.local.remove(firstKey);
+  const myKeys = Object.keys(storageItems)
+  if (myKeys.length >= MAX_NUM_LIST_ITEM) {
+    chrome.storage.local.remove(myKeys[0]);
   }
 }
